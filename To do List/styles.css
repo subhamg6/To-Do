@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}*/
+
+.app-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #2a2a2a;
+}
+
+.header-image {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.task-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#task-input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#add-task-btn {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-task-btn:hover {
+    background-color: #4cae4c;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+li.completed {
+    text-decoration: line-through;
+    background-color: #d3ffd3;
+}
+
+button.delete-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.delete-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 10px;
+    }
+
+    #task-input {
+        width: 70%;
+    }
+
+    #add-task-btn {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .task-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #task-input {
+        width: 100%;
+    }
+
+    #add-task-btn {
+        width: 100%;
+    }
+}
